@@ -1,0 +1,150 @@
+/* * { */
+/* outline: 1px solid red; */
+/* } */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Playfair Display", "Arial", sans-serif;
+    font-size: 0;
+    color: #626262;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+/* navigation of page */
+.navigation {
+    padding-top: 76px;
+    padding-bottom: 94px;
+    padding-right: 0;
+    padding-left: 0;
+    list-style: none;
+    font-size: 0;
+    text-align: center;
+}
+
+.navigation li {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    display: inline;
+}
+
+.navigation li:nth-child(1) {
+    margin-right: 132px;
+}
+
+.navigation li:nth-child(2) {
+    margin-right: 108px;
+}
+
+.navigation li:nth-child(3) {
+    margin-right: 100px;
+}
+
+/* ?.navigation li:nth-child(4) { */
+/* margin-right: 160px; */
+/* } */
+
+
+
+
+.navigation a {
+    text-decoration: none;
+    color: #626262;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    color: rgb(3, 169, 244);
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+/* main content */
+article {
+    display: inline-block;
+    font-size: 0;
+    width: 420px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+.content-box {margin-bottom: 132px;}
+
+.content-box:nth-of-type(2n+1) {
+    margin-right: 60px;
+
+}
+.content-box:nth-last-child(-n + 3){margin-bottom: 38px;}
+
+.article-photo {
+    display: block;
+    min-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.photo-title {
+    color: #b4ad9e;
+    font-size: 14px;
+    margin: 0 0 26px 0;
+}
+
+.article-item {
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0 0 38px 0;
+}
+
+.article-text {
+    /* display: inline-block;
+    width: 420px; */
+    font-size: 14px;
+    margin: 0;
+}
+
+/* field with button */
+/* footer {
+    height: 182px;
+    margin: 0px;
+    padding: 0px;
+} */
+section{padding-bottom: 70px;}
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 164px;
+    height: 60px;
+    font-size: 20px;
+    color: inherit;
+}
