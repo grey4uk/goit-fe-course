@@ -98,45 +98,50 @@ article {
     padding: 0;
     vertical-align: top;
 }
+.content-box {margin-bottom: 132px;}
 
 .content-box:nth-of-type(2n+1) {
     margin-right: 60px;
 
 }
+.content-box:nth-last-child(-n + 3){margin-bottom: 38px;}
 
 .article-photo {
     display: block;
     min-width: 100%;
     height: auto;
+    margin-bottom: 30px;
 }
 
 .photo-title {
     color: #b4ad9e;
     font-size: 14px;
+    margin: 0 0 26px 0;
 }
 
 .article-item {
     font-size: 30px;
     line-height: 36px;
+    margin: 0 0 38px 0;
 }
 
 .article-text {
-    display: inline-block;
-    width: 420px;
+    /* display: inline-block;
+    width: 420px; */
     font-size: 14px;
+    margin: 0;
 }
 
-/* section of footer */
-footer {
+/* field with button */
+/* footer {
     height: 182px;
     margin: 0px;
     padding: 0px;
-}
-
+} */
+section{padding-bottom: 70px;}
 button {
-    margin-top: 40px;
-    margin-left: 358px;
-    margin-right: 378px;
+    display: block;
+    margin: 0 auto;
     padding: 0;
     width: 164px;
     height: 60px;
