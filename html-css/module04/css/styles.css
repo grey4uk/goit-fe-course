@@ -241,6 +241,7 @@ h2::after {
 }
 
 .news-list-button {
+    color: #f3fbf9;
     border-radius: 6px;
     width: 130px;
     height: 52px;
