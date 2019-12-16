@@ -170,11 +170,15 @@ nav {
     text-indent: 10px;
     float: left;
 }
+.shop-list-tile-name-link {
+    text-decoration: none;
+}
 
 
 .shop-list-tile-price {
     background: #8c8c8c;
     font-size: 14px;
+    font-weight: bolder;
     color: #ffffff;
     line-height: 40px;
     width: 62px;
