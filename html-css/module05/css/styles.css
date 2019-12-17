@@ -12,8 +12,11 @@ input[type="radio"].visually-hidden {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-*{margin: 0;
-padding: 0;}
+
+* {
+    margin: 0;
+    padding: 0;
+}
 
 html {
     box-sizing: border-box;
@@ -37,7 +40,7 @@ html {
 }
 
 body {
-    font-family: 'Open sans', 'Arial', sans-serif;
+    font-family: "Open sans", "Arial", sans-serif;
     font-size: 14px;
     color: #555252;
     margin: 0;
@@ -52,18 +55,21 @@ img {
 
 /*navigation blok start*/
 .nav {
-   height: 92px;
-   padding: 30px 0;
+    height: 92px;
+    padding: 24px 0;
 }
 
 .logo {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    line-height: 32px;
     text-decoration: none;
     color: inherit;
     font-size: 30px;
-    margin: 0;
+    margin: 6px 0;
     padding: 0;
     float: left;
-    
+
 }
 
 .logo::first-letter {
@@ -90,9 +96,13 @@ img {
 }
 
 .navigation-item-link {
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
     font-size: 14px;
     text-decoration: none;
     color: inherit;
+
 }
 
 .navigation a:hover,
@@ -101,16 +111,30 @@ img {
 }
 
 .navigation-item:not(:last-child) {
-    margin-right: 31px;
+    margin-right: 28px;
 }
 
 /*navigation blok end*/
 
 /* section of tours */
-.tours {width: auto;
-    height: 596px;
-    background-image: url("https://picua.org/images/2019/12/17/6eec51f899d19b40571bea83f284d924.jpg");
-background-size: cover ;}
+.tours {
+    min-width: auto;
+    min-height: 596px;
+    background-image: url("https://picua.org/images/2019/12/17/d4c8f14c5fa8b8d82f9b7357203160b8.jpg");
+    background-size: cover;
+    position: relative;
+}
+.tours::after{display: block;
+    content: "";
+    min-width: auto;
+    min-height: 596px;
+    background: rgba(0, 0, 2, .5);
+position: absolute;
+left: 0;
+right: 0;}
+
+  
+
 
 
 
@@ -124,8 +148,10 @@ background-size: cover ;}
 }
 
 .section-title {
-    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
     font-size: 48px;
+    text-align: center;
     margin: 0 0 92px;
     padding: 100px 0 0;
 }
@@ -171,14 +197,16 @@ background-size: cover ;}
 
 
 .shop-list-tile-name {
-    background: #323232;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
     font-size: 14px;
+    line-height: 32px;
+    background: #323232;
     color: #ffffff;
-    line-height: 40px;
     width: 193px;
     height: 40px;
     margin: 0;
-    padding: 0;
+    padding: 4px 0;
     text-indent: 10px;
     float: left;
 }
@@ -189,15 +217,16 @@ background-size: cover ;}
 
 
 .shop-list-tile-price {
-    background: #8c8c8c;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
     font-size: 14px;
-    font-weight: bolder;
+    line-height: 32px;
+    background: #8c8c8c;
     color: #ffffff;
-    line-height: 40px;
     width: 62px;
     height: 40px;
     margin: 0;
-    padding: 0;
+    padding: 4px 0;
     text-align: center;
     float: right;
 }
@@ -216,12 +245,23 @@ background-size: cover ;}
 
 /* shop blok end */
 /* FOOTER */
-.copirait {background: #323232;
-    color: #fefefe;
-text-align: center;
-font-size: 16px;
-line-height: 90px;
+.footer {
+    background: #323232;
+    min-height: 88px;
+    padding: 36px 0;
 
 }
-.copirait-link{text-decoration: none;
-color: #46bfa9}
+
+.copirait {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #fefefe;
+    text-align: center;
+}
+
+.copirait-link {
+    text-decoration: none;
+    color: #46bfa9
+}
