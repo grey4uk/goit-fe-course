@@ -13,6 +13,11 @@ input[type="radio"].visually-hidden {
     overflow: hidden;
 }
 
+ul,
+ol {
+    text-decoration: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -107,7 +112,7 @@ img {
 
 .navigation a:hover,
 .navigation a:focus {
-    color: #1abc9c;
+    color: rgb(26, 188, 156);
 }
 
 .navigation-item:not(:last-child) {
@@ -116,27 +121,105 @@ img {
 
 /*navigation blok end*/
 
+
+
 /* section of tours */
 .tours {
     min-width: auto;
     min-height: 596px;
-    background-image: url("https://picua.org/images/2019/12/17/d4c8f14c5fa8b8d82f9b7357203160b8.jpg");
-    background-size: cover;
+}
+
+.tours:hover .tours-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tours:hover .button {
+    background-color: rgba(26, 188, 156, 1);
+}
+
+
+.tours-slider {
     position: relative;
 }
-.tours::after{display: block;
-    content: "";
-    min-width: auto;
-    min-height: 596px;
-    background: rgba(0, 0, 2, .5);
-position: absolute;
-left: 0;
-right: 0;}
 
-  
+.tours-photo {
+    width: 100%;
+    height: 596px;
+    object-fit: cover;
+}
+
+.tours-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 596px;
+    background-color: rgba(0, 0, 2, 0.6);
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.tours-navigation-text {
+    width: 742px;
+    height: 98px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -80%);
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+
+}
+
+.tours-navigation-title {
+    font-weight: 900;
+    font-size: 58px;
+    margin: 0 0 10px;
+}
+
+.tours-navigation-item {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.button {
+    height: 104px;
+    width: 104px;
+    background-color: rgba(26, 188, 156, .6);
+    border: none;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.button-image {
+    display: inline-block;
+
+}
 
 
 
+.prev {
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.next {
+    float: right;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.control-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
 
 /* end section of tours */
 
@@ -178,6 +261,7 @@ right: 0;}
     padding: 0;
     list-style: none;
     float: left;
+    position: relative;
 }
 
 .shop-list-tile:not(:nth-child(4n+4)) {
@@ -190,9 +274,13 @@ right: 0;}
 
 
 .shop-list-tile-photo {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+
     margin: 0;
     padding: 0;
+}
+.shop-list-tile-photo:hover .shop-overlay{
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -242,6 +330,93 @@ right: 0;}
 .shop-list-tile:focus .shop-list-tile-price {
     background: #7fd9c7;
 }
+
+/* Shop overlay */
+
+.shop-overlay {
+    width: 100%;
+    height: 322px;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+   
+}
+
+
+
+.shop-list-tile-overlay {
+    display: inline-block;
+    width: 166px;
+    height: 106;
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   transform: translate(-50% ,-50%);
+
+}
+
+.shop-list-tile-overlay-item:nth-child(-n+2) {
+    margin-right: 6px;
+}
+
+.shop-list-tile-overlay-item:last-child {
+    margin-top: 4px;
+}
+
+.shop-list-tile-overlay-item {
+    display: block;
+    border: 1px solid rgb(255, 255, 255);
+    float: left;
+    font-size: 0;
+}
+
+.shop-list-tile-overlay-item-icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.icon-hart {
+    background-image: url("https://picua.org/images/2019/12/18/66ff1150713f4c9a1ab20f0fe0ad69fa.png");
+}
+
+.icon-arrows {
+    background-image: url("https://picua.org/images/2019/12/18/cb5c6ce4672286b68855786ebb8f75e5.png");
+}
+
+.icon-clock {
+    background-image: url("https://picua.org/images/2019/12/18/69c1f14853b243d4399665108d521889.png");
+}
+
+.icon-basket {
+    background-image: url("https://picua.org/images/2019/12/18/b87f2d6d69570966bc6aa2fbe29cf14f.png");
+    float: left;
+}
+
+.overlay-basket-text {
+    display: inline-block;
+    width: 112px;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: center;
+    text-indent: 10px;
+    color: #ffffff;
+}
+
+
 
 /* shop blok end */
 /* FOOTER */
