@@ -313,7 +313,8 @@ img {
     float: right;
 }
 
-.shop-list-tile:hover .shop-overlay {
+.shop-list-tile:hover .shop-overlay,
+.shop-list-tile:focus .shop-overlay {
     opacity: 1;
     visibility: visible;
 }
@@ -334,7 +335,7 @@ img {
     background-color: rgba(0, 0, 0, .5);
     position: absolute;
     border: 10px solid rgba(255, 255, 255, .6);
-    background-clip: border-size;
+    background-clip: padding-box;
     top: 0;
     left: 0;
     right: 0;
@@ -346,7 +347,7 @@ img {
 .shop-list-tile-overlay {
     display: inline-block;
     width: 166px;
-    height: 106;
+    height: 106px;
     list-style: none;
     position: absolute;
     top: 50%;
@@ -420,19 +421,23 @@ img {
     float: top;
 }
 
-.arrows:hover {
+.arrows:hover,
+.arrows:focus {
     background-color: rgb(26, 188, 156)
 }
 
-.clock:hover {
+.clock:hover,
+.clock:focus {
     background-color: rgb(26, 188, 156)
 }
 
-.hart:hover {
+.hart:hover,
+.hart:focus {
     background-color: rgb(26, 188, 156)
 }
 
-.basket:hover {
+.basket:hover,
+.basket:focus {
     background-color: rgb(50, 50, 50);
 }
 
