@@ -398,6 +398,7 @@ img {
 .icon-basket {
     width: auto;
 }
+.basket{background-color: rgb(50, 50, 50);}
 .overlay-basket-icon{ background-image: url("https://picua.org/images/2019/12/18/b87f2d6d69570966bc6aa2fbe29cf14f.png");
     display: inline-block;
     width: 48px;
@@ -423,22 +424,22 @@ img {
 
 .arrows:hover,
 .arrows:focus {
-    background-color: rgb(26, 188, 156)
+    background-color: rgb(26, 188, 156);
 }
 
 .clock:hover,
 .clock:focus {
-    background-color: rgb(26, 188, 156)
+    background-color: rgb(26, 188, 156);
 }
 
 .hart:hover,
 .hart:focus {
-    background-color: rgb(26, 188, 156)
+    background-color: rgb(26, 188, 156);
 }
 
 .basket:hover,
 .basket:focus {
-    background-color: rgb(50, 50, 50);
+    background-color:rgb(26, 188, 156);
 }
 
 /* shop blok end */
