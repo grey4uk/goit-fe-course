@@ -247,7 +247,7 @@ img {
     width: 255px;
     list-style: none;
     float: left;
-    background: #323232;
+     background: #323232;
 }
 
 .shop-list-tile:not(:nth-child(4n+4)) {
@@ -329,7 +329,7 @@ img {
     bottom: 0;
     opacity: 0;
     visibility: hidden;
-    background-clip: border-box;
+    background-clip: padding-box;
 }
 
 .shop-list-tile-overlay {
