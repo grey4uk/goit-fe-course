@@ -126,7 +126,10 @@ img {
     min-height: 100%;
 }
 
-.tours:hover .button {
+.next:hover{
+    background-color: rgba(26, 188, 156, 1);
+}
+.prev:hover{
     background-color: rgba(26, 188, 156, 1);
 }
 
@@ -185,7 +188,6 @@ img {
 
 .button-image {
     display: inline-block;
-
 }
 
 .prev {
@@ -242,7 +244,7 @@ img {
 }
 
 .shop-list-tile {
-    position: relative;
+    width: 255px;
     list-style: none;
     float: left;
     background: #323232;
@@ -281,8 +283,7 @@ img {
 }
 
 .shop-list-tile-card {
-    width: 255px;
-    height: auto;
+    position: relative;
 }
 
 .shop-list-tile-price {
@@ -318,15 +319,14 @@ img {
 
 /* Shop overlay */
 .shop-overlay {
-
     background-color: rgba(0, 0, 0, .5);
     position: absolute;
-    border: 10px solid rgba(255, 255, 255);
+    border: 10px solid rgba(255, 255, 255, .5);
     background-clip: padding-box;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 11%;
+    bottom: 0;
     opacity: 0;
     visibility: hidden;
     background-clip: border-box;
@@ -342,7 +342,6 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 
 .shop-list-tile-overlay-item:nth-child(-n+2) {
     margin-right: 6px;
@@ -370,7 +369,6 @@ img {
     background-repeat: no-repeat;
     background-position: center;
 }
-
 
 .icon-hart {
     background-image: url("https://picua.org/images/2019/12/18/66ff1150713f4c9a1ab20f0fe0ad69fa.png");
@@ -420,7 +418,6 @@ img {
 .shop-list-tile-overlay-item:focus {
     background-color: rgb(26, 188, 156);
 }
-
 /* shop blok end */
 
 /* FOOTER */
