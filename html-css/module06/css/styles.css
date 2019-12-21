@@ -1,22 +1,7 @@
-/* .We_work_with {
-    font-size: 24px;
-    font-family: "KaushanScript";
-    color: rgb(51, 51, 51);
-    line-height: 1.2;
-   
-  }
-  .Amazing_Services {
-    font-size: 30px;
-    font-family: "Montserrat";
-    color: rgb(51, 51, 51);
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1.2;
-  
-  } */
 /* font-family: 'Kaushan Script', cursive; */
 /* font-family: 'Roboto', sans-serif; */
 /* font-family: 'Montserrat', sans-serif; */
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -30,6 +15,13 @@ input[type="radio"].visually-hidden {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+@font-face {
+    font-family: "KaushanScript-Regular";
+    src: url("../fonts/KaushanScript-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 ul,
@@ -70,19 +62,25 @@ body {
     color: rgb(153, 153, 153);
     background-color: rgb(255, 255, 255);
 }
- /* HEADER */
- 
+
+/* HEADER */
 .site-navigation {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 112px;
+    align-items: center;
+    padding-bottom: 94px;
     padding-top: 28px;
+}
+
+.logo {
+    padding-bottom: 36px;
 }
 
 .navigation-list {
     width: 490px;
     display: flex;
     justify-content: space-between;
+    align-content: flex-end;
 }
 
 .navigation-list-item::after {
@@ -97,16 +95,206 @@ body {
 .navigation-list-item-link:hover {
     color: #f38181;
 }
- .navigation-list-item:hover::after{
-    opacity: 1;
-} 
 
+.navigation-list-item:hover::after {
+    opacity: 1;
+}
 
 .navigation-list-item-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
     text-decoration: none;
     color: #95e1d3;
     text-transform: uppercase;
 }
 
-  
+/* Services section */
+.services-container {
+    margin-bottom: 94px;
+    height: 100%;
+}
 
+.title-text {
+    font-size: 24px;
+    font-family: "KaushanScript-Regular", cursive;
+    color: rgb(51, 51, 51);
+    line-height: 28px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(51, 51, 51);
+    font-weight: 900;
+    font-style: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 62px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 62px;
+    height: 6px;
+    background-color: #f38181;
+    text-align: center;
+    margin: 40px auto 0;
+}
+
+.services-list {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-around;
+}
+
+.services-list-item {
+    width: 382px;
+    height: 72px;
+    text-align: left;
+    position: relative;
+}
+
+.services-list-item:not(:nth-last-child(-n+3)) {
+    margin-bottom: 102px;
+}
+
+.services-list-item-desc {
+    width: 300px;
+    position: absolute;
+    right: 0;
+}
+
+.services-list-item::before {
+    content: "";
+    display: inline-block;
+    width: 62px;
+    height: 34px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20px;
+}
+
+.photography::before {
+    background-image: url("https://picua.org/images/2019/12/20/74971f2cfb704c954344df052b3a93ca.png");
+}
+
+.web::before {
+    background-image: url("https://picua.org/images/2019/12/20/31e4edb08b4b5a5e1cd5384473dd3a2b.png");
+}
+
+.creativity::before {
+    background-image: url("https://picua.org/images/2019/12/20/443009be51a2e09809095741257d8483.png");
+}
+
+.seo::before {
+    background-image: url("https://picua.org/images/2019/12/20/2908896a89d47f91d9c74a94b09e3ac9.png");
+}
+
+.html-css::before {
+    background-image: url("https://picua.org/images/2019/12/20/0747e94aeb6a3a30d56c7010b4666897.png");
+}
+
+.digital::before {
+    background-image: url("https://picua.org/images/2019/12/20/ef2b0d281788c56b826de25fce734215.png");
+}
+
+.services-list-item-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.services-list-item-text {
+    line-height: 24px;
+}
+
+/* section TEAM */
+.team-description{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    padding-bottom: 90px;
+text-align: center;}
+
+/* FOOTER */
+.footer {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 -1px 0 #e5e5e5;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 62px;
+}
+
+.copirait {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgb(51, 51, 51);
+    text-align: left;
+}
+
+.copirait-link {
+    text-decoration: none;
+    color: rgb(51, 51, 51)
+}
+
+.copirait-link:hover {
+    color: #f38181;
+    ;
+}
+
+.form-button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    background-color: #95e1d3;
+    border: none;
+    color: rgb(255, 255, 255);
+    width: 150px;
+    height: 40px;
+}
+
+.entering-place {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 380px;
+    height: 40px;
+}
+
+input[type="email"] {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    color: #000000;
+    line-height: 36px;
+    border: 2px solid #e5e5e5;
+    border-right: none;
+    text-indent: 12px;
+}
+
+input[type="email"]::-moz-placeholder {
+    color: #e5e5e5;
+}
+
+
+/* .entering-place input::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300i;
+} */
