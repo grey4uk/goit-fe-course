@@ -1,0 +1,220 @@
+:root {
+    --main-color: #777777;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "DroidSerifItalic";
+    src: url("../fonts/DroidSerifItalic.woff") format("woff");
+    font-style: italic;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "roboto-slab400", serif;
+    src: url("../fonts/roboto-slab400.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "montserrat400", sans-serif;
+    src: url("../fonts/montserrat400.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "montserrat700", sans-serif;
+    src: url("../fonts/montserrat700.woff") format("woff");
+    font-style: normal;
+    font-weight: 700;
+}
+
+ul,
+ol {
+    text-decoration: none;
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* HEADER */
+.site-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 98px;
+    padding-top: 40px;
+    min-height: 180px;
+}
+
+.logo {
+    justify-self: left;
+    transition: transform .2s linear;
+}
+
+.logo:hover,
+.logo:focus {
+    transform: scale(1.2);
+}
+
+.navigation-list {
+    width: 490px;
+    height: 28px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+}
+
+.navigation-list-item-link:focus,
+.navigation-list-item-link:hover {
+    color: #fed136;
+    font-size: 16px;
+}
+
+.navigation-list-item-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 41px;
+    text-decoration: none;
+    color: #222222;
+    text-transform: uppercase;
+    transition: font-size .2s linear;
+}
+
+/* ////////SSECTION SERVICES///////////// */
+
+.services {
+    min-height: 440px;
+    padding-bottom: 120px;
+}
+
+.services-box-title {
+    text-align: center;
+    padding-bottom: 78px;
+}
+
+.box-name {
+    font-family: "montserrat700", sans-serif;
+    font-size: 40px;
+    line-height: 75px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.services-box-title-name {
+    color: #222222;
+}
+
+.box-desc {
+    font-family: "DroidSerifItalic", serif;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+    color: #777777;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-list-item {
+    width: 280px;
+    text-align: center;
+}
+
+.services-list-item::before {
+    content: "";
+    display: block;
+    height: 74px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.services-list-item:first-child::before {
+    background-image: url("https://picua.org/images/2019/12/22/a37c1ad96122965685812ddedc5fa158.png");
+}
+
+.services-list-item:nth-child(2)::before {
+    background-image: url("https://picua.org/images/2019/12/22/c756af9fbae88ee989a8a6bb6e074e43.png");
+}
+
+.services-list-item:last-child::before {
+    background-image: url("https://picua.org/images/2019/12/22/bbefcf1aabeff1a49d7351e5248b3be9.png");
+}
+
+.services-list-item-title {
+    font-family: "montserrat700", sans-serif;
+    font-size: 18px;
+    line-height: 75px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.services-list-item-text {
+    font-family: "roboto-slab400", serif;
+    font-style: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--main-color);
+}
+
+/* ////////SECTION CONTACT US//////////// */
+.contact {
+    min-height: 678px;
+    background-image: url("https://picua.org/images/2019/12/22/6be945f61ff6b8d2c4a481c8ab912df2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 108px;
+    padding-bottom: 112px;
+}
+
+.contact-box-title {
+    text-align: center;
+}
+
+.contact-box-title-name {
+    color: #fff;
+}

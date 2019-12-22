@@ -94,7 +94,6 @@ body {
     background-color: #f38181;
     margin-top: 10px;
     opacity: 0;
-    transition: hight .2s linear;
 }
 
 .navigation-list-item-link:focus,
