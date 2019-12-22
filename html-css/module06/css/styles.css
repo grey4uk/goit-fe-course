@@ -106,7 +106,7 @@ body {
 .navigation-list-item:hover::after,
 .navigation-list-item:focus::after {
     opacity: 1;
-    }
+}
 
 .navigation-list-item-link {
     font-family: 'Montserrat', sans-serif;
@@ -119,22 +119,28 @@ body {
 }
 
 /* Services section */
-.services-container {
-    margin-bottom: 94px;
-    height: 100%;
+.services {
+    padding-bottom: 94px;
+}
+
+.title-box {
+    text-align: center;
+    padding-bottom: 62px;
 }
 
 .title-text {
+    display: inline-block;
     font-size: 24px;
     font-family: "KaushanScript-Regular", cursive;
     color: rgb(51, 51, 51);
     line-height: 28px;
     font-weight: 300;
     text-align: center;
+    text-transform: none;
+    margin-bottom: 18px;
 }
 
 .section-title {
-    font-size: 30px;
     font-family: "Montserrat", sans-serif;
     color: rgb(51, 51, 51);
     font-weight: 900;
@@ -142,14 +148,14 @@ body {
     line-height: 36px;
     text-transform: uppercase;
     text-align: center;
-    padding-bottom: 62px;
+
 }
 
 .section-title::after {
     content: "";
     display: block;
     width: 62px;
-    height: 6px;
+    height: 4px;
     background-color: #f38181;
     text-align: center;
     margin: 40px auto 0;
@@ -240,13 +246,16 @@ body {
 .team-list-container {
     padding-bottom: 82px;
     min-height: 626px;
- }
+}
 
 .team-list {
     display: flex;
     justify-content: space-between;
 }
-.card-box{background-color: #95e1d3;}
+
+.card-box {
+    background-color: #95e1d3;
+}
 
 .team-list-item-card {
     margin-bottom: 28px;
@@ -261,10 +270,10 @@ body {
     opacity: 1;
 }
 
-.team-list-item-card:hover {
+.team-list-item-card:hover,
+.team-list-item-card:focus {
     transform: translate(-10px, -10px);
 }
-
 
 .team-list-item-name {
     font-family: 'Montserrat', sans-serif;
@@ -293,11 +302,11 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    visibility: hidden; 
+    visibility: hidden;
     opacity: 0;
     transition: .2s linear;
 }
-                
+
 .overlay-list {
     display: flex;
     height: 58px;
@@ -305,11 +314,10 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .overlay-item {
-    border-right: 2px  transparent;
+    border-right: 2px transparent;
     background-color: rgb(252, 227, 138);
     transition: .2s linear;
 }
@@ -326,7 +334,6 @@ body {
     height: 58px;
     background-repeat: no-repeat;
     background-position: center;
-
 }
 
 .facebook {
@@ -407,6 +414,6 @@ input[type="email"] {
     text-indent: 12px;
 }
 
-input[type="email"]::-moz-placeholder {
+input[type="email"]::placeholder {
     color: #e5e5e5;
 }
