@@ -59,7 +59,7 @@ img {
 body {
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 15px;
-    color: rgb(153, 153, 153);
+    color: #999999;
     background-color: rgb(255, 255, 255);
 }
 
@@ -67,17 +67,26 @@ body {
 .site-navigation {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 94px;
-    padding-top: 28px;
+    padding-top: 26px;
+    min-height: 180px;
 }
 
 .logo {
-    padding-bottom: 36px;
+    justify-self: left;
+    align-self: flex-start;
+    transition: transform .2s linear;
+
+}
+
+.logo:hover,
+.logo:focus {
+    transform: scale(1.2);
 }
 
 .navigation-list {
     width: 490px;
+    height: 28px;
+    margin-top: 6px;
     display: flex;
     justify-content: space-between;
     align-content: flex-end;
@@ -90,14 +99,19 @@ body {
     background-color: #f38181;
     margin-top: 10px;
     opacity: 0;
+    transition: hight .2s linear;
 }
 
+.navigation-list-item-link:focus,
 .navigation-list-item-link:hover {
     color: #f38181;
+    font-size: 16px;
 }
 
-.navigation-list-item:hover::after {
+.navigation-list-item:hover::after,
+.navigation-list-item:focus::after {
     opacity: 1;
+    height: 1.2;
 }
 
 .navigation-list-item-link {
@@ -107,6 +121,7 @@ body {
     text-decoration: none;
     color: #95e1d3;
     text-transform: uppercase;
+    transition: font-size .2s linear;
 }
 
 /* Services section */
@@ -209,6 +224,7 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
+    margin-bottom: 16px;
     color: #333333;
     text-transform: uppercase;
 }
@@ -218,13 +234,95 @@ body {
 }
 
 /* section TEAM */
-.team-description{
+.team-description {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
     padding-bottom: 90px;
-text-align: center;}
+    text-align: center;
+}
+
+.team-list-container {
+    padding-bottom: 82px;
+    min-height: 626px;
+}
+
+.team-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-list-item-card {
+    margin-bottom: 28px;
+    min-height: 472px;
+    position: relative;
+   }
+.team-list-item-card-photo{}
+
+.team-list-item-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.team-list-item-profession {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    font-style: 15px;
+    line-height: 24px;
+    
+}
+
+/* OVERLAY */
+.overlay{
+background-image: linear-gradient(to top, rgba(252, 227, 138, .9), rgba(243, 129, 129, .9));
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+display: flex;
+justify-content: center;
+align-content: center;
+
+}
+
+.overlay-list{display: flex;
+    height: 58px;
+}
+.overlay-item{background-color: rgb(252, 227, 138);}
+  
+.overlay-item-link {
+    display: block;
+    width: 58px;
+    height: 58px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.facebook {
+    background-image: url("https://picua.org/images/2019/12/20/90b08b14030058855668bdfb5ed3d697.png");
+}
+
+.twitter {
+    background-image: url("https://picua.org/images/2019/12/22/244f7f3fa17df51ebf6ebad9023cb45e.png");
+}
+
+.pinterest {
+    background-image: url("https://picua.org/images/2019/12/22/d7a300879a2b029e69e49488af62a5d9.png");
+}
+
+.instagram {
+    background-image: url("https://picua.org/images/2019/12/20/0246c921129cd9d39dd57dcc0ea83dbf.png");
+}
+
 
 /* FOOTER */
 .footer {
@@ -255,7 +353,6 @@ text-align: center;}
 
 .copirait-link:hover {
     color: #f38181;
-    ;
 }
 
 .form-button {
@@ -294,7 +391,3 @@ input[type="email"]::-moz-placeholder {
 }
 
 
-/* .entering-place input::placeholder {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300i;
-} */
