@@ -154,7 +154,6 @@ img {
 
 .tours-navigation-text {
     width: 742px;
-    height: 98px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -192,12 +191,14 @@ img {
 
 .prev {
     float: left;
+    background-image: url("https://picua.org/images/2019/12/18/ed72e0a53ff8680ab985bf14d2b450cc.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .next {
     float: right;
+    background-image: url("https://picua.org/images/2019/12/18/bde9cc35dd399773d9a895ffb79e3e61.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -244,7 +245,7 @@ img {
 }
 
 .shop-list-tile {
-    width: 255px;
+    max-width: 255px;
     list-style: none;
     float: left;
      background: #323232;
@@ -268,7 +269,6 @@ img {
     font-weight: 900;
     font-size: 14px;
     line-height: 32px;
-    width: 193px;
     height: 40px;
     margin: 0;
     padding: 4px 0;
@@ -307,15 +307,15 @@ img {
     visibility: visible;
 }
 
-.shop-list-tile:hover .shop-list-tile-name,
-.shop-list-tile:focus .shop-list-tile-name {
+.shop-list-tile:hover,
+.shop-list-tile:focus {
     background: #1abc9c;
 }
 
-.shop-list-tile:hover .shop-list-tile-price,
+/* .shop-list-tile:hover .shop-list-tile-price,
 .shop-list-tile:focus .shop-list-tile-price {
     background: #7fd9c7;
-}
+} */
 
 /* Shop overlay */
 .shop-overlay {
@@ -335,7 +335,6 @@ img {
 .shop-list-tile-overlay {
     display: inline-block;
     width: 166px;
-    height: 106px;
     list-style: none;
     position: absolute;
     top: 50%;
