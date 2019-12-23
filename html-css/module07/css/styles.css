@@ -6,9 +6,9 @@
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    margin: -0.0625rem;
     border: 0;
     padding: 0;
     white-space: nowrap;
@@ -25,24 +25,30 @@ input[type="radio"].visually-hidden {
 }
 
 @font-face {
-    font-family: "roboto-slab400", serif;
-    src: url("../fonts/roboto-slab400.woff") format("woff");
+    font-family: "robotoS", serif;
+    src: url("../fonts/robotoS400.woff") format("woff"),
+    url("../fonts/robotoS400.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
 }
 
+/* montserrat-regular - latin_cyrillic */
 @font-face {
-    font-family: "montserrat400", sans-serif;
-    src: url("../fonts/montserrat400.woff") format("woff");
-    font-style: normal;
-    font-weight: 400;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('../fonts/montserrat400.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat400.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
+/* montserrat-700 - latin_cyrillic */
 @font-face {
-    font-family: "montserrat700", sans-serif;
-    src: url("../fonts/montserrat700.woff") format("woff");
-    font-style: normal;
-    font-weight: 700;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('../fonts/montserrat700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 ul,
@@ -67,7 +73,7 @@ html {
 }
 
 .container {
-    width: 940px;
+    width: 58.75rem;
     margin: 0 auto;
 }
 
@@ -82,9 +88,9 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 98px;
-    padding-top: 40px;
-    min-height: 180px;
+    padding-bottom: 6.125rem;
+    padding-top: 2.5rem;
+    min-height: 11.25rem;
 }
 
 .logo {
@@ -98,9 +104,9 @@ img {
 }
 
 .navigation-list {
-    width: 490px;
-    height: 28px;
-    margin-bottom: 6px;
+    width: 30.625rem;
+    height: 1.75rem;
+    margin-bottom: 0.375rem;
     display: flex;
     justify-content: space-between;
     align-content: flex-end;
@@ -109,14 +115,14 @@ img {
 .navigation-list-item-link:focus,
 .navigation-list-item-link:hover {
     color: #fed136;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .navigation-list-item-link {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 41px;
+    font-size: 0.875rem;
+    line-height: 2.5625rem;
     text-decoration: none;
     color: #222222;
     text-transform: uppercase;
@@ -126,19 +132,19 @@ img {
 /* ////////SSECTION SERVICES///////////// */
 
 .services {
-    min-height: 440px;
-    padding-bottom: 120px;
+    min-height: 27.5rem;
+    padding-bottom: 7.5rem;
 }
 
 .services-box-title {
     text-align: center;
-    padding-bottom: 78px;
+    padding-bottom: 4.875rem;
 }
 
 .box-name {
-    font-family: "montserrat700", sans-serif;
-    font-size: 40px;
-    line-height: 75px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    line-height: 4.6875rem;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -150,7 +156,7 @@ img {
 .box-desc {
     font-family: "DroidSerifItalic", serif;
     font-style: italic;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     color: #777777;
 }
@@ -161,54 +167,60 @@ img {
 }
 
 .services-list-item {
-    width: 280px;
+    width: 17.5rem;
     text-align: center;
+    min-width: 17.5rem;
 }
 
 .services-list-item::before {
     content: "";
     display: block;
-    height: 74px;
+    height: 4.625rem;
+    width: 4.625rem;
+    margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
-}
+    border: 0.25rem solid #fed136;
+    border-radius: 50%;
+    }
 
 .services-list-item:first-child::before {
-    background-image: url("https://picua.org/images/2019/12/22/a37c1ad96122965685812ddedc5fa158.png");
+    background-image: url("https://picua.org/images/2019/12/23/de2a874dacaf13249d9676845464640d.png");
 }
 
 .services-list-item:nth-child(2)::before {
-    background-image: url("https://picua.org/images/2019/12/22/c756af9fbae88ee989a8a6bb6e074e43.png");
+    background-image: url("https://picua.org/images/2019/12/23/115635aaaf85bcecd4b7e1f3faa5a286.png");
 }
 
 .services-list-item:last-child::before {
-    background-image: url("https://picua.org/images/2019/12/22/bbefcf1aabeff1a49d7351e5248b3be9.png");
+    background-image: url("https://picua.org/images/2019/12/23/1fd3a8802f4ab547e28f01749a21209d.png");
 }
 
 .services-list-item-title {
-    font-family: "montserrat700", sans-serif;
-    font-size: 18px;
-    line-height: 75px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.125rem;
+    line-height: 4.6875rem;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 .services-list-item-text {
-    font-family: "roboto-slab400", serif;
-    font-style: 14px;
+    font-family: "robotoS", serif;
+    font-size: 0.875rem;
     font-weight: 400;
-    line-height: 16px;
+    line-height: 1.2;
     color: var(--main-color);
+    
 }
 
 /* ////////SECTION CONTACT US//////////// */
 .contact {
-    min-height: 678px;
+    min-height: 42.375rem;
     background-image: url("https://picua.org/images/2019/12/22/6be945f61ff6b8d2c4a481c8ab912df2.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 108px;
-    padding-bottom: 112px;
+    padding-top: 6.75rem;
+    padding-bottom: 7rem;
 }
 
 .contact-box-title {
