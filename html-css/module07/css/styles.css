@@ -27,28 +27,33 @@ input[type="radio"].visually-hidden {
 @font-face {
     font-family: "robotoS", serif;
     src: url("../fonts/robotoS400.woff") format("woff"),
-    url("../fonts/robotoS400.woff2") format("woff2");
+        url("../fonts/robotoS400.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
 }
 
 /* montserrat-regular - latin_cyrillic */
 @font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'),
-       url('../fonts/montserrat400.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/montserrat400.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('../fonts/montserrat400.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat400.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
 /* montserrat-700 - latin_cyrillic */
 @font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Montserrat Bold'), local('Montserrat-Bold'),
-       url('../fonts/montserrat700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/montserrat700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+        url('../fonts/montserrat700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 ul,
@@ -182,7 +187,7 @@ img {
     background-repeat: no-repeat;
     border: 0.25rem solid #fed136;
     border-radius: 50%;
-    }
+}
 
 .services-list-item:first-child::before {
     background-image: url("https://picua.org/images/2019/12/23/de2a874dacaf13249d9676845464640d.png");
@@ -210,7 +215,7 @@ img {
     font-weight: 400;
     line-height: 1.2;
     color: var(--main-color);
-    
+
 }
 
 /* ////////SECTION CONTACT US//////////// */
@@ -221,12 +226,89 @@ img {
     background-repeat: no-repeat;
     padding-top: 6.75rem;
     padding-bottom: 7rem;
+    background-color: #222222;
 }
 
 .contact-box-title {
     text-align: center;
+    padding-bottom: 4.75rem;
 }
 
 .contact-box-title-name {
     color: #fff;
+}
+
+.contact-form {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-indent: 0.625rem;
+    border-radius: 0.25rem;
+}
+
+.contact-form:focus {
+    outline-offset: -0.0625rem;
+}
+
+.contact-form[required]:focus:valid {
+    outline: 0.0625rem solid rgb(0, 255, 0);
+}
+
+.contact-form[required]:focus:invalid {
+    outline: 0.0625rem solid rgb(255, 0, 0);
+}
+
+І .contact-form::placeholder {
+    color: #bbbbbb;
+}
+
+.contact-form input {
+    flex-grow: 1;
+    border: none;
+}
+
+
+.contact-form-container {
+    display: flex;
+    justify-content: space-between;
+    min-width: 58.75rem;
+    padding-bottom: 1.875rem;
+}
+
+.contact-form-container-item {
+    min-width: 28.4375rem;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-form:not(:last-child) {
+    margin-bottom: 1.75rem;
+}
+
+.comments {
+    min-height: 100%;
+    min-width: 100%;
+    border: none;
+    resize: none;
+    text-indent: 0.625rem;
+    line-height: 1.2;
+    padding-top: 0.625rem;
+}
+
+
+
+.button {
+    display: block;
+    width: 15.125rem;
+    height: 4.125rem;
+    margin: 0 auto;
+    background-color: #fed136;
+    color: #fff;
+    border: none;
 }

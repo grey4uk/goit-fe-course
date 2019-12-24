@@ -14,7 +14,7 @@
     <header>
         <div class="container">
             <nav class="site-navigation">
-                <a href="#" class="logo" alt="Golden"><img
+                <a href="#" class="logo"><img
                         src="https://picua.org/images/2019/12/22/240ccf517922100a9dcf241b95650975.png" alt="site logo"
                         width="84" height="22"></a>
                 <ul class="navigation-list">
@@ -64,8 +64,23 @@
                     <h2 class="contact-box-title-name box-name">contact us</h2>
                     <p class="contact-box-name-desc box-desc">Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
-
-                
+                <form action="#" method="post" class="contact-form">
+                    <div class="contact-form-container">
+                        <div class="contact-form-container-item data">
+                            <input type="text" class="contact-form name" placeholder="your name*" name="UserName"
+                                required>
+                            <input type="email" class="contact-form mail" placeholder="your e-mail*" name="UserMail"
+                                required>
+                            <input type="text" class="contact-form subject" placeholder="subject"
+                                name="subjectOfquestion">
+                        </div>
+                        <div class="contact-form-container-item message">
+                            <textarea name="coments" class="contact-form comments" id="#" cols="30" rows="10"
+                                placeholder="your message*" required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="contact-form button">send message</button>
+                </form>
             </div>
         </section>
     </main>
