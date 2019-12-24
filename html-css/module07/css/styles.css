@@ -226,7 +226,7 @@ img {
     background-repeat: no-repeat;
     padding-top: 6.75rem;
     padding-bottom: 7rem;
-    background-color: #222222;
+    background-color: rgb(34, 34, 34);
 }
 
 .contact-box-title {
@@ -248,16 +248,12 @@ img {
     border-radius: 0.25rem;
 }
 
-.contact-form:focus {
-    outline-offset: -0.0625rem;
-}
-
 .contact-form[required]:focus:valid {
-    outline: 0.0625rem solid rgb(0, 255, 0);
+    border: 0.125rem solid rgb(0, 255, 0);
 }
 
 .contact-form[required]:focus:invalid {
-    outline: 0.0625rem solid rgb(255, 0, 0);
+    border: 0.125rem solid rgb(255, 0, 0);
 }
 
 І .contact-form::placeholder {
@@ -268,7 +264,6 @@ img {
     flex-grow: 1;
     border: none;
 }
-
 
 .contact-form-container {
     display: flex;
