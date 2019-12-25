@@ -217,6 +217,10 @@ body {
 .partners-action-link {
     color: #ff4e50;
 }
+.partners-action:hover,
+.partners-action:focus{background-color: #ff4e50;}
+.partners-action:hover .partners-action-link,
+.partners-action:focus .partners-action-link{color: rgb(255, 255, 255);}
 
 .partners {
     background-color: #fff;
