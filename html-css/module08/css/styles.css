@@ -16,16 +16,20 @@ input[type="radio"].visually-hidden {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
 /* roboto-300 - cyrillic_latin */
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
     src: local('Roboto Light'), local('Roboto-Light'),
-         url('../fonts/roboto300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/roboto300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* montserrat-700 - latin_cyrillic */
+        url('../fonts/roboto300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto300.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-700 - latin_cyrillic */
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
@@ -59,7 +63,7 @@ html {
 }
 
 .container {
-    width: 280px;
+    width: 288px;
     margin: 0 auto;
 }
 
@@ -67,4 +71,248 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+body {
+    background-color: #000;
+    position: relative;
+}
+
+.hat {
+    margin: 0 auto;
+    padding-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.buttons {
+    text-align: center;
+}
+
+.btn {
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    line-height: 1.2;
+    width: 90px;
+    height: 36px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.btn:hover,
+.btn:focus {
+    border: 2px solid #fff;
+    border-radius: 18px;
+    background: transparent;
+}
+
+.logo {
+    visibility: hidden;
+}
+
+.holliday {
+    background-image: url("https://picua.org/images/2019/12/24/b78c662b5e0c37057c8c89e35ce39b7b.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 174px 0 138px;
+    color: #fff;
+    text-align: center;
+}
+
+.holliday span {
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    font-family: "Montserrat";
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+
+.holliday-title-desc {
+    font-size: 18px;
+    font-family: "Roboto";
+    line-height: 1.2;
+    font-weight: 300;
+    padding: 0 28px;
+}
+}
+
+.holliday-title:first-child {
+    margin-bottom: 10px;
+}
+
+.holliday-title:nth-child(2) {
+    margin-bottom: 18px;
+}
+
+.logo-mobile {
+    text-align: center;
+    padding-bottom: 34px;
+}
+
+.logo-link {
+    font-size: 20px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    line-height: 1.2;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.action {
+    display: block;
+    width: 280px;
+    height: 40px;
+    border-radius: 20px;
+    line-height: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.holliday-action {
+    background-color: #ff4e50;
+}
+
+.action-link {
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.holliday-action-link {
+    color: rgb(255, 255, 255);
+}
+
+.holliday-action:hover,
+.holliday-action:focus {
+    background-color: rgb(255, 255, 255);
+}
+
+.holliday-action:hover .holliday-action-link,
+.holliday-action:focus .holliday-action-link {
+    color: #ff4e50;
+}
+
+.partners-action {
+    background-color: transparent;
+    border: 1px solid #ff4e50;
+}
+
+.partners-action-link {
+    color: #ff4e50;
+}
+
+.partners {
+    background-color: #fff;
+    padding: 68px 0 0;
+}
+
+.partners-container {
+    text-align: center;
+}
+.partners-list{ padding:22px 0 36px;}
+
+.partners-list-item-card {
+    max-width: 220px;
+}
+.partners-list-item-card-photo{ position: relative;
+}
+.card-photo {
+    display: block;
+    margin: 0 auto;
+   
+}
+
+.partners-list-item-card-photo::after {
+    content: "";
+    height: 38px;
+    width: 38px;
+    display: block;
+    background-image: url("https://picua.org/images/2019/12/24/795196c2c73768eae2178ebab758229c.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom:0;
+    right:52px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+}
+.card-name{padding-bottom: 18px;}
+
+
+@media (min-width:767px) {
+    .container {
+        width: 768px;
+    }
+
+    .holliday {
+        background-image: url("https://picua.org/images/2019/12/24/1dfbdb3f42731fa643194a4f33ecb484.png");
+        padding: 224px 0 234px;
+    }
+
+
+    .holliday-title:first-child {
+        margin-bottom: 16px;
+    }
+
+    .holliday-title:nth-child(2) {
+        margin-bottom: 30px;
+    }
+
+
+    .logo {
+        visibility: visible;
+    }
+
+    .logo-mobile {
+        visibility: hidden;
+    }
+
+    .hat {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 38px 36px 0;
+    }
+
+    .holliday-title span {
+        font-size: 52px;
+    }
+
+    .holliday-title-desc {
+        font-size: 24px;
+    }
+
+    .action {
+        width: 228px;
+    }
+}
+
+@media (min-width:939px) {
+
+    .holliday {
+        background-image: url("https://picua.org/images/2019/12/24/53ecd9cf114b5e361370d75481d97413.png");
+    }
+
+    .container {
+        width: 940px;
+    }
+
+    .hat {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

@@ -25,7 +25,7 @@ input[type="radio"].visually-hidden {
 }
 
 @font-face {
-    font-family: "robotoS", serif;
+    font-family: "RobotoSlab";
     src: url("../fonts/robotoS400.woff") format("woff"),
         url("../fonts/robotoS400.woff2") format("woff2");
     font-style: normal;
@@ -210,14 +210,13 @@ img {
 }
 
 .services-list-item-text {
-    font-family: "robotoS", serif;
-    font-size: 0.875rem;
+    font-size: 14px;
+    font-family: "RobotoSlab";
     font-weight: 400;
     line-height: 1.2;
     color: var(--main-color);
-
 }
-
+  
 /* ////////SECTION CONTACT US//////////// */
 .contact {
     min-height: 42.375rem;
@@ -243,17 +242,16 @@ img {
     font-style: normal;
     font-weight: 700;
     line-height: 1.2;
-    text-transform: uppercase;
     text-indent: 0.625rem;
     border-radius: 0.25rem;
-}
+    }
 
 .contact-form[required]:focus:valid {
-    border: 0.125rem solid rgb(0, 255, 0);
+    border: 0.25rem solid rgb(0, 255, 0);
 }
 
 .contact-form[required]:focus:invalid {
-    border: 0.125rem solid rgb(255, 0, 0);
+    border: 0.25rem solid rgb(255, 0, 0);
 }
 
 І .contact-form::placeholder {
@@ -262,7 +260,7 @@ img {
 
 .contact-form input {
     flex-grow: 1;
-    border: none;
+    border-style: none;
 }
 
 .contact-form-container {
