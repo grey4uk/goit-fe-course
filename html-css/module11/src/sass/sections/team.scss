@@ -1,0 +1,121 @@
+.team-container{
+    border-bottom: 0.125rem solid #e5e5e5;
+}
+.team-description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+    padding-bottom: 5.625rem;
+    text-align: center;
+}
+
+.team-list-container {
+    padding-bottom: 5.125rem;
+    min-height: 39.125rem;
+}
+
+.team-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-box {
+    background-color: #95e1d3;
+}
+
+.team-list-item-card {
+    max-width: 23.875rem;;
+    margin-bottom: 1.75rem;
+    position: relative;
+    transition: transform .2s linear;
+}
+
+.team-list-item-card:hover .overlay,
+.team-list-item-card:focus .overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.team-list-item-card:hover,
+.team-list-item-card:focus {
+    transform: translate(-0.625rem, -0.625rem);
+}
+
+.team-list-item-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.team-list-item-profession {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+}
+
+/* OVERLAY */
+.overlay {
+    background-image: linear-gradient(to top, rgba(252, 227, 138, .9), rgba(243, 129, 129, .9));
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.overlay-list {
+    display: flex;
+    height: 3.625rem;
+}
+
+.overlay-item {
+    background-color: rgb(252, 227, 138);
+    transition: .2s linear;
+}
+.overlay-item:not(:last-child){margin-right: 0.0625rem;}
+
+
+.overlay-item:hover,
+.overlay-item:focus {
+    background-color: #95e1d3;
+    transform: scale(1.05);
+}
+
+.overlay-item-link {
+    display: block;
+    width: 3.625rem;
+    height: 3.625rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.facebook {
+    background-image: url("https://picua.org/images/2019/12/20/90b08b14030058855668bdfb5ed3d697.png");
+}
+
+.twitter {
+    background-image: url("https://picua.org/images/2019/12/22/244f7f3fa17df51ebf6ebad9023cb45e.png");
+}
+
+.pinterest {
+    background-image: url("https://picua.org/images/2019/12/22/d7a300879a2b029e69e49488af62a5d9.png");
+}
+
+.instagram {
+    background-image: url("https://picua.org/images/2019/12/20/0246c921129cd9d39dd57dcc0ea83dbf.png");
+}

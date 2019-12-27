@@ -1,0 +1,53 @@
+.site-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.625rem;
+    min-height: 11.25rem;
+}
+
+.logo {
+    transition: transform .2s linear;
+}
+
+.logo:hover,
+.logo:focus {
+    transform: scale(1.2);
+}
+
+.navigation-list {
+    width: 30.625rem;
+    margin-top: 0.375rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+}
+
+.navigation-list-item-link::after {
+    display: block;
+    content: "";
+    height: 0.25rem;
+    background-color: #f38181;
+    margin-top: 0.625rem;
+    opacity: 0;
+}
+
+.navigation-list-item-link:focus,
+.navigation-list-item-link:hover {
+    color: #f38181;
+    font-size: 1rem;
+}
+
+.navigation-list-item-link:hover::after,
+.navigation-list-item-link:focus::after {
+    opacity: 1;
+}
+
+.navigation-list-item-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: #95e1d3;
+    text-transform: uppercase;
+    transition: font-size .2s linear;
+}
