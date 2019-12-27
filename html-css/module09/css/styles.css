@@ -1,0 +1,351 @@
+
+
+:root {
+    --main-color: #777777;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* roboto-300 - cyrillic_latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'),
+        url('../fonts/roboto300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto300.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+        url('../fonts/montserrat700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: #000;
+    position: relative;
+}
+
+.hat {
+    margin: 0 auto;
+    padding-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.buttons {
+    text-align: center;
+}
+
+.btn {
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    line-height: 1.2;
+    width: 90px;
+    height: 36px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.btn:hover,
+.btn:focus {
+    border: 2px solid #fff;
+    border-radius: 18px;
+    background: transparent;
+}
+
+
+.logo {
+    display: none;
+}
+
+.logo-link {
+    font-size: 20px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    line-height: 1.2;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.holliday {
+    background-image: url("https://picua.org/images/2019/12/24/b78c662b5e0c37057c8c89e35ce39b7b.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 174px 0 138px;
+    color: #fff;
+    text-align: center;
+}
+.holliday-name{display: block;
+    margin-bottom: 18px;}
+
+.holliday-title{
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    font-family: "Montserrat";
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+
+.holliday-title-desc {
+    display: block;
+    font-size: 18px;
+    font-family: "Roboto";
+    line-height: 1.2;
+    font-weight: 300;
+    padding: 0 30px;
+}
+
+.logo-mobile {
+    display: block;
+}
+
+.action {
+    display: block;
+    width: 280px;
+    height: 40px;
+    border-radius: 20px;
+    line-height: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.holliday-action {
+    background-color: #ff4e50;
+}
+
+.action-link {
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.holliday-action-link {
+    color: rgb(255, 255, 255);
+}
+
+.holliday-action:hover,
+.holliday-action:focus {
+    background-color: rgb(255, 255, 255);
+}
+
+.holliday-action:hover .holliday-action-link,
+.holliday-action:focus .holliday-action-link {
+    color: #ff4e50;
+}
+
+.partners-action {
+    background-color: transparent;
+    border: 1px solid #ff4e50;
+}
+
+.partners-action-link {
+    color: #ff4e50;
+}
+
+.partners-action:hover,
+.partners-action:focus {
+    background-color: #ff4e50;
+}
+
+.partners-action:hover .partners-action-link,
+.partners-action:focus .partners-action-link {
+    color: rgb(255, 255, 255);
+}
+
+.partners {
+    background-color: #fff;
+    padding: 68px 0 56px;
+}
+
+.partners-title {
+    font-size: 22px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    line-height: 1.2;
+    display: block;
+    text-align: center;
+}
+
+.partners-list {
+    padding-left: 0;
+    padding-bottom: 34px;
+}
+
+.partners-list-item {
+    display: block;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.partners-list-item-card {
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+.partners-list-item-card-photo {
+    position: relative;
+    margin: 34px 0 18px;
+}
+
+.card-photo {
+    display: block;
+    margin: 0 auto;
+}
+
+.partners-list-item-card-photo::after {
+    content: "";
+    height: 38px;
+    width: 38px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    right: 52px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+}
+
+.partners-list-item:first-child .partners-list-item-card-photo::after {
+    background-image: url("https://picua.org/images/2019/12/24/795196c2c73768eae2178ebab758229c.png");
+}
+
+.partners-list-item:nth-child(2) .partners-list-item-card-photo::after {
+    background-image: url("https://picua.org/images/2019/12/24/5ad3fda473844ec784943944e3c70368.png");
+}
+
+.partners-list-item:nth-child(3) .partners-list-item-card-photo::after {
+    background-image: url("https://picua.org/images/2019/12/24/ff7ec82120f92fc033d6b532d4ddc3a9.png");
+}
+
+.partners-list-item:last-child .partners-list-item-card-photo::after {
+    background-image: url("https://picua.org/images/2019/12/24/842517484059ed5e297f79ddfd935e68.png");
+}
+
+
+.card-name {
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    line-height: 1.2;
+    padding-bottom: 18px;
+}
+
+.card-desc {
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(102, 102, 102);
+    line-height: 1.2;
+}
+
+
+
+@media(min-width:767px) {
+    .holliday {
+        background-image: url("https://picua.org/images/2019/12/24/1dfbdb3f42731fa643194a4f33ecb484.png");
+        padding: 224px 0 234px;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+
+    .buttons {
+        text-align: right;
+    }
+
+    .start {
+        margin-bottom: 16px;
+    }
+
+    .end {
+        margin-bottom: 30px;
+    }
+
+    .holliday-title {
+        font-size: 52px;
+    }
+
+    .holliday-title-desc {
+        font-size: 24px;
+    }
+
+    .action {
+        width: 228px;
+    }
+
+    .partners-list-item {
+        margin: 0;
+    }
+
+    .partners-list-item:nth-child(2) {
+        order: 1;
+    }
+
+    .partners-list-item:nth-child(4) {
+        order: 2;
+    }
+
+}
+@media (max-width:991px) and (min-width:767px) {
+    .partners-list-item:nth-child(-n+2) {
+        margin-right: 20px;
+    }
+}
+
+
+@media (min-width:992px) {
+    .holliday {
+        background-image: url("https://picua.org/images/2019/12/24/53ecd9cf114b5e361370d75481d97413.png");
+    }
+
+}
