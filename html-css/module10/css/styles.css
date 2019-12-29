@@ -143,15 +143,22 @@ body {
 }
 
 .site-logo {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-decoration: none;
     -webkit-transition: -webkit-transform .2s linear;
     transition: -webkit-transform .2s linear;
     -o-transition: transform .2s linear;
     transition: transform .2s linear;
     transition: transform .2s linear, -webkit-transform .2s linear;
-}
+  }
 
 .site-logo:hover,
 .site-logo:focus {
+    color: #fce38a;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
@@ -168,7 +175,7 @@ body {
     display: block;
     content: "";
     height: 0.25rem;
-    background-color: var(--red);
+    background-color:  #fce38a;
     margin-top: 0.625rem;
     opacity: 0;
 }
@@ -190,17 +197,17 @@ body {
 .search__btn--icon {
     width: 0.875rem;
     height: 0.875rem;
-    fill: var(--marine);
+    fill: var(--white);
 }
 
-.search-btn:hover .search__btn--icon,
-.search-btn:focus .search__btn--icon {
-    fill: var(--red);
+.search__btn:hover .search__btn--icon,
+.search__btn:focus .search__btn--icon {
+    fill: #fce38a;
 }
 
 .navigation-list__item--link:focus,
 .navigation-list__item--link:hover {
-    color: var(--red);
+    color: #fce38a;
     font-size: 1rem;
 }
 
@@ -213,7 +220,7 @@ body {
     font-family: var(--title-text);
     font-weight: 400;
     font-size: 0.875rem;
-    color: var(--marine);
+    color: var(--white);
     -webkit-transition: font-size .2s linear;
     -o-transition: font-size .2s linear;
     transition: font-size .2s linear;
@@ -223,9 +230,9 @@ body {
 /* Section baner */
 .baner {
     padding: 4.625rem 0 14.25rem;
-    background-image: -o-linear-gradient(rgba(252, 227, 138, .9), rgba(243, 129, 129, .9)), url("https://picua.org/images/2019/12/28/540056af40d7b40701c876ada790e813.jpg");
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(252, 227, 138, .9)), to(rgba(243, 129, 129, .9))), url("https://picua.org/images/2019/12/28/540056af40d7b40701c876ada790e813.jpg");
-    background-image: linear-gradient(rgba(252, 227, 138, .9), rgba(243, 129, 129, .9)), url("https://picua.org/images/2019/12/28/540056af40d7b40701c876ada790e813.jpg");
+    background-image: -o-linear-gradient( rgba(243, 129, 129, .9),rgba(252, 227, 138, .9)), url("https://picua.org/images/2019/12/28/540056af40d7b40701c876ada790e813.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, .9), to(rgba(252, 227, 138, .9)))), url("https://picua.org/images/2019/12/28/540056af40d7b40701c876ada790e813.jpg");
+    background-image: linear-gradient( rgba(243, 129, 129, .9),rgba(252, 227, 138, .9)), url("https://picua.org/images/2019/12/28/540056af40d7b40701c876ada790e813.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -239,7 +246,6 @@ body {
     width: 51.25rem;
     margin: 0 auto;
 }
-
 .baner__title--text {
     display: block;
     font-size: 4.5rem;
