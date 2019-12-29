@@ -1,121 +1,131 @@
-.team-container{
-    border-bottom: 0.125rem solid #e5e5e5;
+/* section TEAM */
+.team-container {
+  border-bottom: 0.125rem solid $context-grey;
+  padding-bottom: 5.125rem;
 }
+
 .team-description {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 0.9375rem;
-    line-height: 1.5rem;
-    padding-bottom: 5.625rem;
-    text-align: center;
-}
-
-.team-list-container {
-    padding-bottom: 5.125rem;
-    min-height: 39.125rem;
-}
-
-.team-list {
-    display: flex;
-    justify-content: space-between;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  padding-bottom: 5.625rem;
+  text-align: center;
 }
 
 .card-box {
-    background-color: #95e1d3;
+  background-color: $marine;
 }
 
-.team-list-item-card {
-    max-width: 23.875rem;;
-    margin-bottom: 1.75rem;
-    position: relative;
-    transition: transform .2s linear;
-}
+.team__item-card {
+  max-width: 23.875rem;
+  margin-bottom: 1.75rem;
+  position: relative;
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  -o-transition: transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear;
 
-.team-list-item-card:hover .overlay,
-.team-list-item-card:focus .overlay {
+  &:hover,
+  &:focus {
+    -webkit-transform: translate(-0.625rem, -0.625rem);
+    -ms-transform: translate(-0.625rem, -0.625rem);
+    transform: translate(-0.625rem, -0.625rem);
+  }
+
+  &:hover .overlay,
+  &:focus .overlay {
     visibility: visible;
     opacity: 1;
+  }
 }
 
-.team-list-item-card:hover,
-.team-list-item-card:focus {
-    transform: translate(-0.625rem, -0.625rem);
+.team__item--name {
+  font-family: $title-text;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: $title-grey;
 }
 
-.team-list-item-name {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: #333333;
-}
-
-.team-list-item-profession {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    text-align: center;
-    font-size: 0.9375rem;
-    line-height: 1.5rem;
+.team__item--profession {
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 
 /* OVERLAY */
 .overlay {
-    background-image: linear-gradient(to top, rgba(252, 227, 138, .9), rgba(243, 129, 129, .9));
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: .2s linear;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
+  background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, .9), rgba(243, 129, 129, .9));
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, .9)), to(rgba(243, 129, 129, .9)));
+  background-image: linear-gradient(to top, rgba(252, 227, 138, .9), rgba(243, 129, 129, .9));
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.overlay-list {
-    display: flex;
-    height: 3.625rem;
+.overlay__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3.625rem;
 }
 
-.overlay-item {
-    background-color: rgb(252, 227, 138);
-    transition: .2s linear;
-}
-.overlay-item:not(:last-child){margin-right: 0.0625rem;}
+.overlay__list--item {
+  background-color: rgb(252, 227, 138);
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
 
-
-.overlay-item:hover,
-.overlay-item:focus {
-    background-color: #95e1d3;
+  &:hover,
+  &:focus {
+    background-color: $red;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
+  }
+
+  &:hover .overlay-icon,
+  &:focus .overlay-icon {
+    fill: rgb(252, 227, 138);
+  }
 }
+
+.overlay__list--item:not(:last-child) {
+  margin-right: 0.0625rem;
+}
+
 
 .overlay-item-link {
-    display: block;
-    width: 3.625rem;
-    height: 3.625rem;
-    background-repeat: no-repeat;
-    background-position: center;
+  display: block;
+  width: 3.625rem;
+  height: 3.625rem;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.facebook {
-    background-image: url("https://picua.org/images/2019/12/20/90b08b14030058855668bdfb5ed3d697.png");
-}
-
-.twitter {
-    background-image: url("https://picua.org/images/2019/12/22/244f7f3fa17df51ebf6ebad9023cb45e.png");
-}
-
-.pinterest {
-    background-image: url("https://picua.org/images/2019/12/22/d7a300879a2b029e69e49488af62a5d9.png");
-}
-
-.instagram {
-    background-image: url("https://picua.org/images/2019/12/20/0246c921129cd9d39dd57dcc0ea83dbf.png");
+.overlay-icon {
+  width: 3.625rem;
+  height: 3.625rem;
+  fill: $red;
 }

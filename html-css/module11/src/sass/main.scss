@@ -1,17 +1,15 @@
 /*
  * Все паршалы импортировать в этот файл
  */
-
-@import 'normalize.scss';
-@import 'base.scss';
+@import "normalize.scss";
 @import "./helpers/fonts.scss";
 @import "./helpers/variables.scss";
+@import "base.scss";
 @import "./helpers/placeholders.scss";
 @import "./helpers/mixins.scss";
 
-
-
 @import"./sections/header.scss";
+@import"./sections/baner.scss";
 @import"./sections/services.scss";
 @import"./sections/team.scss";
-@import "./sections/footer.scss";
+@import"./sections/footer.scss";
