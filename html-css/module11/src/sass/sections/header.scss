@@ -13,8 +13,14 @@
   padding-top: 1.625rem;
 }
 
+
 .site-logo {
+  font-family: $title-text;
   color: $white;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-decoration: none;
   -webkit-transition: -webkit-transform .2s linear;
   transition: -webkit-transform .2s linear;
   -o-transition: transform .2s linear;
@@ -23,6 +29,7 @@
 
   &:hover,
   &:focus {
+    color: rgb(252, 227, 138);
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
@@ -40,7 +47,7 @@
   display: block;
   content: "";
   height: 0.25rem;
-  background-color: $red;
+  background-color: rgb(252, 227, 138);;
   margin-top: 0.625rem;
   opacity: 0;
 }
@@ -60,7 +67,7 @@
 
   &:hover .search__btn--icon,
   &:focus .search__btn--icon {
-    fill: $red;
+    fill: rgb(252, 227, 138);;
   }
 }
 
@@ -81,7 +88,7 @@
 
   &:focus,
   &:hover {
-    color: $red;
+    color: rgb(252, 227, 138);;
     font-size: 1rem;
   }
 
