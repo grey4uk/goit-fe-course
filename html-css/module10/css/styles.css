@@ -1,9 +1,17 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
-:root {
-    --color-marine: #95e1d3;
-    --color-red: #f38181;
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
+:root {
+    --marine: rgb(149, 225, 211);
+    --red: rgb(243, 129, 129);
+    --white: rgb(255, 255, 255);
+    --main-grey: rgb(153, 153, 153);
+    --title-grey: rgb(51, 51, 51);
+    --context-grey: rgb(229, 229, 229);
+    --body-text: 'Roboto', 'Arial', sans-serif;
+    --cursive-title:  "KaushanScript", cursive;
+    --title-text: 'Montserrat', sans-serif;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -17,7 +25,7 @@ input[type="radio"].visually-hidden {
     padding: 0;
     white-space: nowrap;
     -webkit-clip-path: inset(100%);
-            clip-path: inset(100%);
+    clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
@@ -75,14 +83,14 @@ ol {
 
 html {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
     -webkit-box-sizing: inherit;
-            box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 .container {
@@ -97,10 +105,10 @@ img {
 }
 
 body {
-    font-family: 'Roboto', 'Arial', sans-serif;
+    font-family:var(--body-text);
     font-size: 0.9375rem;
-    color: #999999;
-    background-color: rgb(255, 255, 255);
+    color: var(--main-grey);
+    background-color: var(--white);
     position: relative;
 }
 
@@ -109,10 +117,11 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
-.link{
+
+.link {
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -128,8 +137,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding-top: 1.625rem;
 }
 
@@ -144,22 +153,22 @@ body {
 .site-logo:hover,
 .site-logo:focus {
     -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-            transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .navigation-list {
     width: 622px;
     margin-top: 0.375rem;
     -ms-flex-line-pack: end;
-        align-content: flex-end;
+    align-content: flex-end;
 }
 
 .navigation-list__item--link::after {
     display: block;
     content: "";
     height: 0.25rem;
-    background-color: var(--color-red);
+    background-color: var(--red);
     margin-top: 0.625rem;
     opacity: 0;
 }
@@ -167,8 +176,8 @@ body {
 .search {
     width: 4.25rem;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
 }
 
 .search__btn {
@@ -181,17 +190,17 @@ body {
 .search__btn--icon {
     width: 0.875rem;
     height: 0.875rem;
-    fill: var(--color-marine);
+    fill: var(--marine);
 }
 
 .search-btn:hover .search__btn--icon,
 .search-btn:focus .search__btn--icon {
-    fill: var(--color-red);
+    fill: var(--red);
 }
 
 .navigation-list__item--link:focus,
 .navigation-list__item--link:hover {
-    color: var(--color-red);
+    color: var(--red);
     font-size: 1rem;
 }
 
@@ -201,10 +210,10 @@ body {
 }
 
 .navigation-list__item--link {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--title-text);
     font-weight: 400;
     font-size: 0.875rem;
-    color: var(--color-marine);
+    color: var(--marine);
     -webkit-transition: font-size .2s linear;
     -o-transition: font-size .2s linear;
     transition: font-size .2s linear;
@@ -214,8 +223,8 @@ body {
 /* Section baner */
 .baner {
     padding: 4.625rem 0 14.25rem;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(252, 227, 138, .9)), to(rgba(243, 129, 129, .9))), url("https://picua.org/images/2019/12/28/540056af40d7b40701c876ada790e813.jpg");
     background-image: -o-linear-gradient(rgba(252, 227, 138, .9), rgba(243, 129, 129, .9)), url("https://picua.org/images/2019/12/28/540056af40d7b40701c876ada790e813.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(252, 227, 138, .9)), to(rgba(243, 129, 129, .9))), url("https://picua.org/images/2019/12/28/540056af40d7b40701c876ada790e813.jpg");
     background-image: linear-gradient(rgba(252, 227, 138, .9), rgba(243, 129, 129, .9)), url("https://picua.org/images/2019/12/28/540056af40d7b40701c876ada790e813.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -226,7 +235,7 @@ body {
 .baner__title {
     display: block;
     padding: 10rem 0 7.25rem;
-    color: #fff;
+    color: var(--white);
     width: 51.25rem;
     margin: 0 auto;
 }
@@ -234,7 +243,7 @@ body {
 .baner__title--text {
     display: block;
     font-size: 4.5rem;
-    font-family: "KaushanScript", cursive;
+    font-family: var(--cursive-title);
     line-height: 1.2;
     font-weight: 300;
     text-align: center;
@@ -243,7 +252,7 @@ body {
 
 .baner__title--main {
     display: block;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--title-text);
     font-weight: 700;
     font-size: 9.375rem;
     line-height: 1.2;
@@ -256,15 +265,15 @@ body {
     width: 10.25rem;
     height: 2.75rem;
     margin: 0 auto;
-    border: 0.125rem solid #fff;
+    border: 0.125rem solid var(--white);
 }
 
 .baner-click__link {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--title-text);
     font-weight: 700;
     font-size: 0.875rem;
     line-height: 2.5rem;
-    color: #fff;
+    color: var(--white);
 }
 
 /* Services section */
@@ -280,8 +289,8 @@ body {
 .title-text {
     display: block;
     font-size: 1.5rem;
-    font-family: "KaushanScript", cursive;
-    color: rgb(51, 51, 51);
+    font-family: var(--cursive-title);
+    color: var(--title-grey);
     line-height: 1.75rem;
     font-weight: 300;
     text-align: center;
@@ -291,8 +300,8 @@ body {
 
 .section-title {
     display: block;
-    font-family: "Montserrat", sans-serif;
-    color: rgb(51, 51, 51);
+    font-family: var(--title-text);
+    color: var(--title-grey);
     font-weight: 700;
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -306,7 +315,7 @@ body {
     display: block;
     width: 3.875rem;
     height: 0.25rem;
-    background-color: var(--color-red);
+    background-color: var(--red);
     text-align: center;
     margin: 2.5rem auto 0;
 }
@@ -317,9 +326,9 @@ body {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
 }
 
 .services__item {
@@ -367,16 +376,18 @@ body {
 .services__item--digital::before {
     background-image: url("https://picua.org/images/2019/12/20/ef2b0d281788c56b826de25fce734215.png");
 }
+
 .services__item--desc {
     width: 100%;
 }
+
 .services__item--desc-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--title-text);
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1rem;
     margin-bottom: 1rem;
-    color: #333333;
+    color: var(--title-grey);
     text-transform: uppercase;
 }
 
@@ -386,12 +397,11 @@ body {
 
 /* section TEAM */
 .team-container {
-    border-bottom: 0.125rem solid #e5e5e5;
+    border-bottom: 0.125rem solid var(--context-grey);
     padding-bottom: 5.125rem;
 }
 
 .team-description {
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 0.9375rem;
     line-height: 1.5rem;
@@ -400,7 +410,7 @@ body {
 }
 
 .card-box {
-    background-color: var(--color-marine);
+    background-color: var(--marine);
 }
 
 .team__item-card {
@@ -423,22 +433,21 @@ body {
 .team__item-card:hover,
 .team__item-card:focus {
     -webkit-transform: translate(-0.625rem, -0.625rem);
-        -ms-transform: translate(-0.625rem, -0.625rem);
-            transform: translate(-0.625rem, -0.625rem);
+    -ms-transform: translate(-0.625rem, -0.625rem);
+    transform: translate(-0.625rem, -0.625rem);
 }
 
 .team__item--name {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--title-text);
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1rem;
     text-align: center;
     text-transform: uppercase;
-    color: #333333;
+    color: var(--title-grey);
 }
 
 .team__item--profession {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-style: italic;
     text-align: center;
@@ -448,8 +457,8 @@ body {
 
 /* OVERLAY */
 .overlay {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, .9)), to(rgba(243, 129, 129, .9)));
     background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, .9), rgba(243, 129, 129, .9));
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, .9)), to(rgba(243, 129, 129, .9)));
     background-image: linear-gradient(to top, rgba(252, 227, 138, .9), rgba(243, 129, 129, .9));
     position: absolute;
     top: 0;
@@ -465,11 +474,11 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .overlay__list {
@@ -493,10 +502,10 @@ body {
 
 .overlay__list--item:hover,
 .overlay__list--item:focus {
-    background-color: var(--color-red);
+    background-color: var(--red);
     -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-            transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .overlay__list--item:hover .overlay-icon,
@@ -515,12 +524,12 @@ body {
 .overlay-icon {
     width: 3.625rem;
     height: 3.625rem;
-    fill: var(--color-red);
+    fill: var(--red);
 }
 
 /* FOOTER */
 .footer {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
 
 }
 
@@ -529,30 +538,30 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     min-height: 3.875rem;
 }
 
 .copirait {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--title-text);
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1rem;
-    color: rgb(51, 51, 51);
+    color: var(--title-grey);
     text-align: left;
 }
 
 .copirait__link {
     text-decoration: none;
-    color: var(--color-marine);
+    color: var(--marine);
 }
 
 .copirait__link:hover {
-    color: var(--color-red);
+    color: var(--red);
 }
 
 .entering-place {
@@ -560,66 +569,65 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: 23.75rem;
     height: 2.5rem;
 }
 
 .entering-place__button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--title-text);
     font-weight: 700;
     font-size: 0.875rem;
     text-align: center;
-    background-color: var(--color-marine);
+    background-color: var(--marine);
     border: none;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     width: 9.375rem;
     height: 2.5rem;
     text-transform: uppercase;
 }
 
 input[type="email"] {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-style: italic;
-    color: #000000;
+    color: rgb(0, 0, 0);
     line-height: 2.25rem;
-    border: 0.125rem solid #e5e5e5;
+    border: 0.125rem solid var(--context-grey);
     border-right: none;
     text-indent: 0.75rem;
     width: 100%;
 }
 
 input[type="email"]::-webkit-input-placeholder {
-    color: #e5e5e5;
+    color: var(--context-grey);
     width: 14.375rem;
 
 }
 
 input[type="email"]::-moz-placeholder {
-    color: #e5e5e5;
+    color: var(--context-grey);
     width: 14.375rem;
 
 }
 
 input[type="email"]:-ms-input-placeholder {
-    color: #e5e5e5;
+    color: var(--context-grey);
     width: 14.375rem;
 
 }
 
 input[type="email"]::-ms-input-placeholder {
-    color: #e5e5e5;
+    color: var(--context-grey);
     width: 14.375rem;
 
 }
 
 input[type="email"]::placeholder {
-    color: #e5e5e5;
+    color: var(--context-grey);
     width: 14.375rem;
 
 }
