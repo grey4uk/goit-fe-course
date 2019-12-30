@@ -1,15 +1,15 @@
 @font-face {
   font-family: "KaushanScript";
-  src: url("./fonts/Kaushanscript.woff") format("woff"),
-    url("./fonts/Kaushanscript.woff2") format("woff2");
+  src: url("../fonts/Kaushanscript.woff") format("woff"),
+    url("../fonts/Kaushanscript.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: "RobotoSlab";
-  src: url("./fonts/robotoS400.woff") format("woff"),
-    url("./fonts/robotoS400.woff2") format("woff2");
+  src: url("../fonts/robotoS400.woff") format("woff"),
+    url("../fonts/robotoS400.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
 }
@@ -20,9 +20,9 @@
   font-style: normal;
   font-weight: 400;
   src: local('Montserrat Regular'), local('Montserrat-Regular'),
-    url('./fonts/montserrat400.woff2') format('woff2'),
+    url('../fonts/montserrat400.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('./fonts/montserrat400.woff') format('woff');
+    url('../fonts/montserrat400.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -32,8 +32,8 @@
   font-style: normal;
   font-weight: 700;
   src: local('Montserrat Bold'), local('Montserrat-Bold'),
-    url('./fonts/montserrat700.woff2') format('woff2'),
+    url('../fonts/montserrat700.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('./fonts/montserrat700.woff') format('woff');
+    url('../fonts/montserrat700.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
