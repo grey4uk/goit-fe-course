@@ -195,8 +195,8 @@ body {
 }
 
 .search__btn--icon {
-    width: 0.875rem;
-    height: 0.875rem;
+    width: 1.125rem;
+    height: 1.125rem;
     fill: var(--white);
 }
 
@@ -495,6 +495,11 @@ body {
 }
 
 .overlay__list--item {
+    display: flex;
+    width: 3.625rem;
+    height: 3.625rem;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(252, 227, 138);
     -webkit-transition: .2s linear;
     -o-transition: .2s linear;
@@ -519,17 +524,9 @@ body {
     fill: rgb(252, 227, 138);
 }
 
-.overlay-item-link {
-    display: block;
-    width: 3.625rem;
-    height: 3.625rem;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 .overlay-icon {
-    width: 3.625rem;
-    height: 3.625rem;
+    width: 1.75rem;
+    height: 1.75rem;
     fill: var(--red);
 }
 

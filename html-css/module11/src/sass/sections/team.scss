@@ -92,6 +92,11 @@
 }
 
 .overlay__list--item {
+  display: flex;
+  width: 3.625rem;
+  height: 3.625rem;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(252, 227, 138);
   -webkit-transition: .2s linear;
   -o-transition: .2s linear;
@@ -116,16 +121,8 @@
 }
 
 
-.overlay-item-link {
-  display: block;
-  width: 3.625rem;
-  height: 3.625rem;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .overlay-icon {
-  width: 3.625rem;
-  height: 3.625rem;
+  width: 1.75rem;
+  height: 1.75rem;
   fill: $red;
 }
