@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 :root {
     --text-grey: rgb(134, 135, 139);
     --orange: #ff9b51;
@@ -155,14 +157,20 @@ body {
     width: 100%;
     position: fixed;
     left: 50%;
-    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     background-color: #000;
 }
 
 .fix {
     padding: 1.25rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .logo {
@@ -171,9 +179,15 @@ body {
 
 .nav-list {
     width: 27.75rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .nav-list__item--link {
@@ -191,6 +205,8 @@ body {
 
 /* ---Header--- */
 .header-box {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .4))), url("https://picua.org/images/2020/01/09/693ca25f734a7af974159ae3b96cd81d.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("https://picua.org/images/2020/01/09/693ca25f734a7af974159ae3b96cd81d.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("https://picua.org/images/2020/01/09/693ca25f734a7af974159ae3b96cd81d.jpg");
     background-position: center;
     background-size: cover;
@@ -198,9 +214,13 @@ body {
 }
 
 .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 11.25rem 0 8.75rem;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .header-text {
@@ -255,8 +275,12 @@ body {
 }
 
 .header-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 .free-form {
@@ -283,10 +307,17 @@ body {
 }
 
 .data {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 16rem;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1.75rem 2.375rem 3rem;
 }
 
@@ -309,6 +340,34 @@ body {
     outline: 2px solid var(--orange);
 }
 
+.data-item::-webkit-input-placeholder {
+    font-size: 0.875rem;
+    font-family: var(--text);
+    color: rgb(189, 189, 189);
+    line-height: 1.2;
+}
+
+.data-item::-moz-placeholder {
+    font-size: 0.875rem;
+    font-family: var(--text);
+    color: rgb(189, 189, 189);
+    line-height: 1.2;
+}
+
+.data-item:-ms-input-placeholder {
+    font-size: 0.875rem;
+    font-family: var(--text);
+    color: rgb(189, 189, 189);
+    line-height: 1.2;
+}
+
+.data-item::-ms-input-placeholder {
+    font-size: 0.875rem;
+    font-family: var(--text);
+    color: rgb(189, 189, 189);
+    line-height: 1.2;
+}
+
 .data-item::placeholder {
     font-size: 0.875rem;
     font-family: var(--text);
@@ -329,12 +388,17 @@ body {
 
 /* ---Section socials--- */
 .social-shadow {
-    box-shadow: inset 0 -0.125rem rgba(0, 0, 0, .35);
+    -webkit-box-shadow: inset 0 -0.125rem rgba(0, 0, 0, .35);
+            box-shadow: inset 0 -0.125rem rgba(0, 0, 0, .35);
 }
 
 .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1.375rem 0;
 }
 
@@ -357,8 +421,12 @@ body {
 }
 
 .social-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 39.625rem;
 }
 
@@ -382,8 +450,12 @@ body {
 }
 
 .tab-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .tab-box::after {
@@ -394,7 +466,9 @@ body {
     background-image: url("https://picua.org/images/2020/01/09/3ec9a1f415894dc97ad3c317a9128459.png");
     background-repeat: no-repeat;
     background-position: center;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 .tab-list__item--btn {
@@ -471,12 +545,18 @@ body {
 }
 
 .feature-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .photo {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 .img-text {
@@ -507,8 +587,12 @@ body {
 
 .img-load {
     width: 26.875rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .upload {
@@ -586,8 +670,12 @@ body {
 }
 
 .process__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .process__list--item {
@@ -636,14 +724,21 @@ body {
 }
 
 .pricing__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 .pricing__list--card {
     width: 21.5rem;
-    box-shadow: 0 0.125rem #ccc;
+    -webkit-box-shadow: 0 0.125rem #ccc;
+            box-shadow: 0 0.125rem #ccc;
 }
 
 .price-img {
@@ -691,8 +786,12 @@ body {
 /* ---reviews--- */
 
 .talk__list{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .talk__list--item{
@@ -708,6 +807,8 @@ body {
     background-repeat: no-repeat;
 }
 .user{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -716,9 +817,16 @@ body {
 }
 
 .user__data{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .user__data--name{
@@ -733,6 +841,8 @@ body {
 /* ---stylish--- */
 
 .stylish {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .4))), url("https://picua.org/images/2020/01/09/18a91b95c8d89276847f0f807ecc2e29.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("https://picua.org/images/2020/01/09/18a91b95c8d89276847f0f807ecc2e29.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("https://picua.org/images/2020/01/09/18a91b95c8d89276847f0f807ecc2e29.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -771,12 +881,30 @@ body {
     border: 0.125rem solid rgb(255, 0, 0);
 }
 
+.contact-form::-webkit-input-placeholder {
+    color: rgb(189, 189, 189);
+}
+
+.contact-form::-moz-placeholder {
+    color: rgb(189, 189, 189);
+}
+
+.contact-form:-ms-input-placeholder {
+    color: rgb(189, 189, 189);
+}
+
+.contact-form::-ms-input-placeholder {
+    color: rgb(189, 189, 189);
+}
+
 .contact-form::placeholder {
     color: rgb(189, 189, 189);
 }
 
 .contact-form {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     border-style: none;
     border-bottom: 0.0625rem solid rgb(189, 189, 189);
 }
@@ -786,8 +914,12 @@ body {
 }
 
 .form-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
     padding-bottom: 2.625rem;
 }
@@ -797,9 +929,16 @@ body {
 }
 
 .datas {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .comments {
@@ -834,7 +973,7 @@ body {
 }
 
 /* ---footer--- */
-.footer {
+.shooters {
     background-color: rgb(0, 0, 0);
     padding: 1.375rem 0 0.875rem;
     text-align: center;
