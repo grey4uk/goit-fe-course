@@ -1,0 +1,861 @@
+:root {
+    --text-grey: rgb(134, 135, 139);
+    --orange: #ff9b51;
+    --bgc: #f5f5f5;
+    --text: "Open Sans", sans-serif;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    margin: -0.0625rem;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* open-sans-regular - cyrillic_latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+        url('../fonts/open-sans-v17-cyrillic_latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/open-sans-v17-cyrillic_latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* open-sans-italic - cyrillic_latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Open Sans Italic'), local('OpenSans-Italic'),
+         url('../fonts/open-sans-v17-cyrillic_latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/open-sans-v17-cyrillic_latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+/* open-sans-600 - cyrillic_latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+        url('../fonts/open-sans-v17-cyrillic_latin-600.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/open-sans-v17-cyrillic_latin-600.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* open-sans-700 - cyrillic_latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+        url('../fonts/open-sans-v17-cyrillic_latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/open-sans-v17-cyrillic_latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* open-sans-600italic - cyrillic_latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 600;
+    src: local('Open Sans SemiBold Italic'), local('OpenSans-SemiBoldItalic'),
+        url('../fonts/open-sans-v17-cyrillic_latin-600italic.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/open-sans-v17-cyrillic_latin-600italic.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-300 - latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Raleway Light'), local('Raleway-Light'),
+        url('../fonts/raleway-v14-latin-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/raleway-v14-latin-300.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-regular - latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), local('Raleway-Regular'),
+        url('../fonts/raleway-v14-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/raleway-v14-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+ul,
+ol {
+    text-decoration: none;
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 68.75rem;
+    margin: 0 auto;
+}
+
+body {
+    font-size: 0.875rem;
+    font-family: var(--text);
+    color: var(--text-grey);
+    line-height: 1.2;
+}
+
+/* ---Navigation--- */
+
+.navigation {
+    display: block;
+    width: 100%;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #000;
+}
+
+.fix {
+    padding: 1.25rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: block;
+}
+
+.nav-list {
+    width: 27.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list__item--link {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: var(--text);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.nav-list__item:hover .nav-list__item--link,
+.nav-list__item:focus .nav-list__item--link {
+    color: #fff;
+}
+
+/* ---Header--- */
+.header-box {
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("https://picua.org/images/2020/01/09/693ca25f734a7af974159ae3b96cd81d.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    display: flex;
+    padding: 11.25rem 0 8.75rem;
+    justify-content: space-between;
+}
+
+.header-text {
+    width: 32.25rem;
+}
+
+.header-logo {
+    padding-bottom: 2rem;
+}
+
+.header-title {
+    font-size: 2.25rem;
+    font-weight: 400;
+    font-family: "Raleway";
+    color: rgb(255, 255, 255);
+    margin-bottom: 2rem;
+}
+
+.header-title::after {
+    content: "";
+    display: block;
+    width: 4.125rem;
+    height: 0.125rem;
+    background-color: #fff;
+    margin: 2.375rem 0 0;
+}
+
+.header-description {
+    font-size: 1rem;
+    font-family: "Raleway";
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4375rem;
+    padding-bottom: 2rem;
+}
+
+.header-btn {
+    height: 2.625rem;
+    width: 8.5rem;
+    background-color: transparent;
+    color: #fff;
+    font-size: 0.9375rem;
+    font-family: var(--text);
+    font-weight: 600;
+    border: 0.125rem solid #fff;
+}
+
+.header-btn:hover,
+.header-btn:focus {
+    background-color: #fff;
+    color: #000;
+}
+
+.header-form {
+    display: flex;
+    align-items: flex-end;
+}
+
+.free-form {
+    width: 22.625rem;
+    background-color: #fff;
+}
+
+.form-link {
+    display: block;
+    width: 100%;
+    line-height: 3.5rem;
+    font-size: 20px;
+    font-family: var(--text);
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+
+.free-word {
+    text-transform: uppercase;
+    color: var(--orange);
+}
+
+.data {
+    display: flex;
+    height: 16rem;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.75rem 2.375rem 3rem;
+}
+
+.data-item {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-family: var(--text);
+    color: #000;
+    line-height: 1.2;
+    border: 0.0625rem solid #ccc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 0.5rem 0.75rem;
+}
+
+.data-item:hover,
+.data-item:focus {
+    outline: 2px solid var(--orange);
+}
+
+.data-item::placeholder {
+    font-size: 0.875rem;
+    font-family: var(--text);
+    color: rgb(189, 189, 189);
+    line-height: 1.2;
+}
+
+.start-btn {
+    width: 100%;
+    line-height: 3.5rem;
+    background-color: var(--orange);
+    border: none;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    font-family: var(--text);
+    color: rgb(255, 255, 255);
+}
+
+/* ---Section socials--- */
+.social-shadow {
+    box-shadow: inset 0 -0.125rem rgba(0, 0, 0, .35);
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.375rem 0;
+}
+
+.social-text {
+    width: 22.625rem;
+}
+
+.social-title {
+    font-size: 1.25rem;
+    font-family: var(--text);
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    padding-bottom: 0.75rem;
+}
+
+.social-description {
+    line-height: 1.429;
+}
+
+.social-list {
+    display: flex;
+    justify-content: space-between;
+    width: 39.625rem;
+}
+
+.social-icon {
+    display: block;
+    width: 3.125rem;
+    height: 3.125rem;
+    fill: #ccc;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+    fill: rgb(51, 51, 51);
+}
+
+/* ---section Tabs--- */
+
+.tabs {
+    background-color: var(--bgc);
+    padding: 9.125rem 0 7.25rem;
+}
+
+.tab-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-box::after {
+    content: "";
+    display: block;
+    width: 20rem;
+    height: 16rem;
+    background-image: url("https://picua.org/images/2020/01/09/3ec9a1f415894dc97ad3c317a9128459.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    align-self: center;
+}
+
+.tab-list__item--btn {
+    width: 6.875rem;
+    height: 6.875rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    border-bottom: 0.0625rem solid #fff;
+    font-size: 0.9375rem;
+    font-family: var(--text);
+    font-weight: 700;
+    line-height: 1.333;
+}
+
+.tab-list__item--btn:hover,
+.tab-list__item--btn:focus {
+    background-color: var(--orange);
+    cursor: pointer;
+}
+
+.tab-text {
+    width: 29.625rem;
+    font-size: 0.875rem;
+    font-family: var(--text);
+    font-weight: 400;
+    color: rgb(134, 135, 139);
+    line-height: 1.429;
+}
+
+.tab-title {
+    padding-bottom: 3.25rem;
+    font-size: 1.25rem;
+    font-family: var(--text);
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.tab-desc1 {
+    padding-bottom: 1.25rem;
+}
+
+.tab-desc2 {
+    padding-bottom: 3.125rem;
+}
+
+.tab-btn {
+    width: 7.5rem;
+    height: 3rem;
+    background-color: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: 0.125rem;
+    font-size: 0.9375rem;
+    font-family: var(--text);
+    color: rgb(255, 255, 255);
+    line-height: 1.333;
+    text-align: left;
+    font-weight: 600;
+    text-align: center;
+}
+
+.tab-btn:hover,
+.tab-btn:focus {
+    opacity: .8;
+}
+
+/* ---Feature1--- */
+
+.feature-img {
+    padding: 5.75rem 0 8.125rem;
+}
+
+.feature-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.photo {
+    align-self: center;
+}
+
+.img-text {
+    width: 26.875rem;
+}
+
+.img-title {
+    font-size: 1.25rem;
+    font-family: var(--text);
+    color: rgb(33, 33, 33);
+    font-weight: 700;
+    line-height: 2.15;
+    padding-bottom: 1.5rem;
+}
+
+.img-title::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.125rem;
+    background-color: var(--orange);
+    margin-top: 1.125rem;
+}
+
+.img-desc {
+    padding-bottom: 3.125rem;
+}
+
+.img-load {
+    width: 26.875rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload {
+    padding-bottom: 2.5rem;
+}
+
+.load-box {
+    width: 22.625rem;
+}
+
+.img-load::before {
+    content: "";
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.125rem solid var(--orange);
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.upload::before {
+    background-image: url("https://picua.org/images/2020/01/09/67bd667e6f015621a99b038f86632779.png");
+}
+
+.download::before {
+    background-image: url("https://picua.org/images/2020/01/09/2086df3499ee3f2074ee66e59775f4f8.png");
+}
+
+.load-title {
+    font-weight: 600;
+    color: rgb(33, 33, 33);
+    line-height: 1.214;
+    padding-bottom: 0.625rem;
+}
+
+/* ---Feature2--- */
+
+.feature2 {
+    background-color: var(--bgc);
+}
+
+.img-desc1 {
+    padding-bottom: 1.5rem;
+}
+
+/* ---section process--- */
+
+.sections {
+    padding: 6.625rem 0;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-family: "Raleway";
+    color: rgb(33, 33, 33);
+    line-height: 1.194;
+    text-align: center;
+    padding-bottom: 1.875rem;
+    text-transform: uppercase;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    background-color: var(--orange);
+    width: 4rem;
+    height: 0.1875rem;
+    margin: 1.875rem auto 0;
+}
+
+.desc {
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.process__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.process__list--item {
+    width: 22rem;
+    text-align: center;
+}
+
+.process__list--item::before {
+    content: "";
+    display: block;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 2px solid var(--orange);
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-bottom: 1.875rem;
+}
+
+.process__list--item:first-child::before {
+    background-image: url("https://picua.org/images/2020/01/09/7f57d6b3e99d6069a887d909829f19f3.png");
+}
+
+.process__list--item:nth-child(2)::before {
+    background-image: url("https://picua.org/images/2020/01/09/4c086ee2ee6b29cfb7f759b5b3396464.png");
+}
+
+.process__list--item:last-child::before {
+    background-image: url("https://picua.org/images/2020/01/09/4ffb696515b7a524b35de39ab6ca88e7.png");
+}
+
+.item-title {
+    font-size: 1.25rem;
+    font-family: var(--text);
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+    line-height: 1.2;
+    padding-bottom: 1.125rem;
+}
+
+/* ---section pricing--- */
+
+.pricing {
+    background-color: var(--bgc);
+}
+
+.pricing__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.pricing__list--card {
+    width: 21.5rem;
+    box-shadow: 0 0.125rem #ccc;
+}
+
+.price-img {
+    margin: 0 auto 1.375rem;
+}
+
+.card__list--item {
+    text-align: center;
+}
+
+.card__list--item:first-child {
+    font-size: 1.25rem;
+    font-family: var(--text);
+    font-weight: 700;
+    line-height: 3.75rem;
+    border-bottom: 0.125rem solid #fff;
+    color: #fff;
+}
+
+.card__list--item:nth-child(2) {
+    padding: 1.875rem 0 1.125rem;
+    color: rgba(255, 255, 255, 0.502);
+    font-style: italic;
+    font-weight: 600;
+}
+
+.card__list--item:nth-child(-n+2) {
+    background-color: rgb(51, 51, 51);
+}
+
+.card__list--item:nth-child(n+3) {
+    text-transform: uppercase;
+    border-bottom: 0.0625rem solid var(--bgc);
+    line-height: 2.5rem;
+    background-color: #fff;
+}
+
+.card__list--item:nth-child(3) {
+    background-color: var(--orange);
+    padding: 0.1875rem 0;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* ---reviews--- */
+
+.talk__list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.talk__list--item{
+    width: 17.125rem;
+}
+
+.words{
+    font-style: italic;
+    padding: 1.375rem 0.75rem 2.625rem;
+    margin-bottom: 0.625rem;
+    background-image: url("https://picua.org/images/2020/01/09/6e85be299e8e2124235e219fe5dd5072.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.user{
+    display: flex;
+}
+
+.user__ava{
+    margin-right: 1.25rem;
+}
+
+.user__data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user__data--name{
+    font-size: 1.25rem;
+    font-family: var(--text);
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+    padding-bottom: 0.375rem;
+}
+  
+
+/* ---stylish--- */
+
+.stylish {
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("https://picua.org/images/2020/01/09/18a91b95c8d89276847f0f807ecc2e29.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4.5rem 0 3.875rem;
+    text-align: center;
+}
+
+.stylish-title {
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+}
+
+.stylish-title::after {
+    background-color: #fff;
+}
+
+.stylish-desc {
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: "Raleway";
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.2;
+    padding-bottom: 2.125rem;
+
+}
+
+/* ---contact--- */
+
+
+.contact-form[required]:focus:valid {
+    border: 0.125rem solid rgb(0, 255, 0);
+}
+
+.contact-form[required]:focus:invalid {
+    border: 0.125rem solid rgb(255, 0, 0);
+}
+
+.contact-form::placeholder {
+    color: rgb(189, 189, 189);
+}
+
+.contact-form {
+    flex-grow: 1;
+    border-style: none;
+    border-bottom: 0.0625rem solid rgb(189, 189, 189);
+}
+
+.contact-form:not(:last-child){
+    margin-bottom: 0.75rem;
+}
+
+.form-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 2.625rem;
+}
+
+.input-box {
+    width: 33.125rem;
+}
+
+.datas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.comments {
+    min-height: 100%;
+    min-width: 100%;
+    border: none;
+    border-bottom: 0.0625rem solid rgb(189, 189, 189);
+    resize: none;
+    text-indent: 0.625rem;
+    line-height: 1.2;
+    padding-top: 0.625rem;
+
+}
+
+.contact-button {
+    display: block;
+    width: 9.125rem;
+    height: 2.875rem;
+    margin: 0 auto;
+    background-color: var(--orange);
+    color: #fff;
+    border: 1px solid var(--orange);
+    border-radius: 0.25rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+
+.contact-button:hover,
+.contact-button:focus {
+    color: var(--orange);
+    background-color: #fff;
+}
+
+/* ---footer--- */
+.footer {
+    background-color: rgb(0, 0, 0);
+    padding: 1.375rem 0 0.875rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.footer-list {
+    width: 20rem;
+    margin: 0 auto;
+    padding-bottom: 0.75rem;
+}
+
+.icon {
+    width: 1.625rem;
+    height: 1.625rem;
+}
+
+.icon:hover {
+    fill: #fff;
+}
+
+.copy__link {
+    color: var(--text-grey);
+}
